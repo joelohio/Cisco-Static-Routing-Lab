@@ -7,7 +7,7 @@ This project demonstrates the design and configuration of a multi-router network
 The network consists of three Cisco 2911 routers connecting two separate LANs through point-to-point WAN links. Static routing was configured to enable communication between devices on the 192.168.1.0/24 and 192.168.3.0/24 networks.
 
 ## Network Topology
-
+![Network Topology](Network%20Topology.jpeg)
 The network includes:
 
 - 3 Cisco 2911 routers
@@ -41,7 +41,9 @@ Static routes were manually configured on the routers to allow communication bet
 The edge routers forward traffic destined for the remote LAN toward the intermediate router, which provides connectivity between both sides of the network.
 
 ## Connectivity Testing
+### Ping Test
 
+![Successful Ping Test](Connectivity%20Test%20(2).jpeg)
 End-to-end connectivity was tested using ICMP ping.
 
 The client PC on the 192.168.3.0/24 network successfully communicated with:
@@ -52,7 +54,16 @@ The client PC on the 192.168.3.0/24 network successfully communicated with:
 Successful ping tests confirmed that the static routes were correctly forwarding traffic between the two LANs.
 
 ## Verification
+### Routing Tables
 
+#### Router 1
+![Router 1 Routing Table](Router-1%20Routing%20Table.jpeg)
+
+#### Router 2
+![Router 2 Routing Table](Router-2%20Routing%20Table.jpeg)
+
+#### Router 3
+![Router 3 Routing Table](Router-3%20Routing%20Table.jpeg)
 The following Cisco IOS command was used to verify the routing tables:
 
 `show ip route`
